@@ -1,0 +1,18 @@
+{
+  "tasks": [
+    {
+      "args": [
+        "--init-file",
+        "${workspaceFolder}/.vscode/kos_make.sh"
+      ],
+      "command": "bash",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build",
+      "type": "process"
+    }
+  ],
+  "version": "2.0.0"
+}

@@ -1,0 +1,34 @@
+{
+  "configurations": [
+    {
+      "avoidWindowsConsoleRedirection": false,
+      "cwd": "${workspaceRoot}",
+      "debugServerArgs": "--log=DEBUG --gdb-sh4=9999 -A null -e ${workspaceRoot}/${workspaceFolderBasename}.elf -n",
+      "debugServerPath": "/opt/toolchains/dc/lxdream-nitro/builddir/lxdream-nitro",
+      "externalConsole": false,
+      "filterStderr": true,
+      "filterStdout": true,
+      "internalConsoleOptions": "openOnSessionStart",
+      "launchCompleteCommand": "exec-run",
+      "miDebuggerPath": "/opt/toolchains/dc/sh-elf/bin/sh-elf-gdb",
+      "miDebuggerServerAddress": ":9999",
+      "name": "LXDream",
+      "preLaunchTask": "Build",
+      "program": "${workspaceRoot}/${workspaceFolderBasename}.elf",
+      "request": "launch",
+      "serverStarted": "SH4 GDB server running on port",
+      "setupCommands": [
+        {
+          "description": "Set GDB architecture to SuperH",
+          "ignoreFailures": false,
+          "text": "set architecture sh"
+        }
+      ],
+      "stopAtConnect": false,
+      "stopAtEntry": true,
+      "type": "cppdbg",
+      "useExtendedRemote": true
+    }
+  ],
+  "version": "0.2.0"
+}
